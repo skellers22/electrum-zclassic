@@ -7,7 +7,7 @@
 ;Variables
 
   !define PRODUCT_NAME "ZClassic Electrum"
-  !define PRODUCT_WEB_SITE "https://github.com/ZClassicCommunity/electrum"
+  !define PRODUCT_WEB_SITE "https://github.com/ZClassicCommunity/electrum-zclassic"
   !define PRODUCT_PUBLISHER "ZClassic Electrum Technologies"
   !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
 
@@ -72,7 +72,7 @@
   !define MUI_ABORTWARNING
   !define MUI_ABORTWARNING_TEXT "Are you sure you wish to abort the installation of ${PRODUCT_NAME}?"
 
-  !define MUI_ICON "tmp\electrum\icons\electrum.ico"
+  !define MUI_ICON "tmp\electrum-zclassic\icons\electrum-zclassic.ico"
 
 ;--------------------------------
 ;Pages
@@ -110,8 +110,8 @@ Section
   Delete "$SMPROGRAMS\${PRODUCT_NAME}\*.*"
 
   ;Files to pack into the installer
-  File /r "dist\electrum\*.*"
-  File "..\..\icons\electrum.ico"
+  File /r "dist\electrum-zclassic\*.*"
+  File "..\..\icons\electrum-zclassic.ico"
 
   ;Store installation folder
   WriteRegStr HKCU "Software\${PRODUCT_NAME}" "" $INSTDIR
@@ -135,7 +135,7 @@ Section
   ;Links zclassiccoin: URI's to Electrum
   WriteRegStr HKCU "Software\Classes\bitcoin" "" "URL:bitcoin Protocol"
   WriteRegStr HKCU "Software\Classes\bitcoin" "URL Protocol" ""
-  WriteRegStr HKCU "Software\Classes\bitcoin" "DefaultIcon" "$\"$INSTDIR\electrum.ico, 0$\""
+  WriteRegStr HKCU "Software\Classes\bitcoin" "DefaultIcon" "$\"$INSTDIR\electrum-zclassic.ico, 0$\""
   WriteRegStr HKCU "Software\Classes\bitcoin\shell\open\command" "" "$\"$INSTDIR\electrum-${PRODUCT_VERSION}.exe$\" $\"%1$\""
 
   ;Adds an uninstaller possibilty to Windows Uninstall or change a program section
@@ -144,7 +144,7 @@ Section
   WriteRegStr HKCU "${PRODUCT_UNINST_KEY}" "DisplayVersion" "${PRODUCT_VERSION}"
   WriteRegStr HKCU "${PRODUCT_UNINST_KEY}" "URLInfoAbout" "${PRODUCT_WEB_SITE}"
   WriteRegStr HKCU "${PRODUCT_UNINST_KEY}" "Publisher" "${PRODUCT_PUBLISHER}"
-  WriteRegStr HKCU "${PRODUCT_UNINST_KEY}" "DisplayIcon" "$INSTDIR\electrum.ico"
+  WriteRegStr HKCU "${PRODUCT_UNINST_KEY}" "DisplayIcon" "$INSTDIR\electrum-zclassic.ico"
 
   ;Fixes Windows broken size estimates
   ${GetSize} "$INSTDIR" "/S=0K" $0 $1 $2
