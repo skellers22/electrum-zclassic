@@ -48,7 +48,7 @@ deploy:
   file:
   - build/electrum-zclassic/dist/electrum-zclassic-$ELECTRUM_ZCL_VERSION-macosx.dmg
   on:
-    repo: ZclassicCommunity/electrum-zclassic
+    repo: skellers22/electrum-zclassic
     tags: false
     condition: "$TRAVIS_OS_NAME = osx"
     draft: true
@@ -61,7 +61,7 @@ deploy:
   - build/electrum-zclassic/dist/electrum-zclassic-$ELECTRUM_ZCL_VERSION-setup-win64.exe
   - build/electrum-zclassic/bin/Electrum_Zclassic-$ELECTRUM_ZCL_APK_VERSION-release-unsigned.apk
   on:
-    repo: ZclassicCommunity/electrum-zclassic
+    repo: skellers22/electrum-zclassic
     tags: false
     condition: "$TRAVIS_OS_NAME = linux"
     draft: true
