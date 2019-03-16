@@ -11,7 +11,7 @@ else:
     raise BaseException('no name')
 
 
-home = 'C:\\electrum-zclassic\\'
+home = 'C:\\electrum_zclassic\\'
 
 # see https://github.com/pyinstaller/pyinstaller/issues/2005
 hiddenimports = []
@@ -27,13 +27,13 @@ binaries = [("c:/python3.5.4/libusb-1.0.dll", ".")]
 binaries += [b for b in collect_dynamic_libs('PyQt5') if 'qwindowsvista' in b[0]]
 
 datas = [
-    (home+'lib/currencies.json', 'electrum-zclassic'),
-    (home+'lib/servers.json', 'electrum-zclassic'),
-#    (home+'lib/checkpoints.json', 'electrum-zclassic'),
-    (home+'lib/servers_testnet.json', 'electrum-zclassic'),
-#    (home+'lib/checkpoints_testnet.json', 'electrum-zclassic'),
-    (home+'lib/wordlist/english.txt', 'electrum-zclassic/wordlist'),
-    (home+'lib/locale', 'electrum-zclassic/locale'),
+    (home+'lib/currencies.json', 'electrum_zclassic'),
+    (home+'lib/servers.json', 'electrum_zclassic'),
+#    (home+'lib/checkpoints.json', 'electrum_zclassic'),
+    (home+'lib/servers_testnet.json', 'electrum_zclassic'),
+#    (home+'lib/checkpoints_testnet.json', 'electrum_zclassic'),
+    (home+'lib/wordlist/english.txt', 'electrum_zclassic/wordlist'),
+    (home+'lib/locale', 'electrum_zclassic/locale'),
     (home+'plugins', 'electrum_plugins'),
     ('C:\\Program Files (x86)\\ZBar\\bin\\', '.')
 ]
@@ -86,7 +86,7 @@ exe_standalone = EXE(
     a.scripts,
     a.binaries,
     a.datas,
-    name=os.path.join('build\\pyi.win32\\electrum-zclassic', cmdline_name + ".exe"),
+    name=os.path.join('build\\pyi.win32\\electrum_zclassic', cmdline_name + ".exe"),
     debug=False,
     strip=None,
     upx=False,
@@ -99,7 +99,7 @@ exe_portable = EXE(
     a.scripts,
     a.binaries,
     a.datas + [ ('is_portable', 'README.md', 'DATA' ) ],
-    name=os.path.join('build\\pyi.win32\\electrum-zclassic', cmdline_name + "-portable.exe"),
+    name=os.path.join('build\\pyi.win32\\electrum_zclassic', cmdline_name + "-portable.exe"),
     debug=False,
     strip=None,
     upx=False,
@@ -113,7 +113,7 @@ exe_dependent = EXE(
     pyz,
     a.scripts,
     exclude_binaries=True,
-    name=os.path.join('build\\pyi.win32\\electrum-zclassic', cmdline_name),
+    name=os.path.join('build\\pyi.win32\\electrum_zclassic', cmdline_name),
     debug=False,
     strip=None,
     upx=False,
