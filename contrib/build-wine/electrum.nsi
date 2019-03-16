@@ -7,7 +7,7 @@
 ;Variables
 
   !define PRODUCT_NAME "ZClassic Electrum"
-  !define PRODUCT_WEB_SITE "https://github.com/skellers22/electrum"
+  !define PRODUCT_WEB_SITE "https://github.com/ZClassicCommunity/electrum"
   !define PRODUCT_PUBLISHER "ZClassic Electrum Technologies"
   !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
 

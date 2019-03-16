@@ -84,6 +84,6 @@ setup(
     author="Thomas Voegtlin",
     author_email="thomasv@electrum.org",
     license="MIT License",
-    url="https://github.com/skellers22/electrum-zclassic",
+    url="https://github.com/ZClassicCommunity/electrum-zclassic",
     long_description="""Lightweight Zclassic Wallet"""
 )

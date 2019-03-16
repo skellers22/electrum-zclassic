@@ -6,11 +6,11 @@ Electrum-Zclassic - Lightweight Zclassic client
   Licence: MIT Licence
   Author: Thomas Voegtlin
   Language: Python
-  Homepage: https://github.com/skellers22/electrum-zcl
+  Homepage: https://github.com/ZClassicCommunity/electrum-zcl
 
 
-.. image:: https://travis-ci.org/skellers22/electrum-zcl.svg?branch=master
-    :target: https://travis-ci.org/skellers22/electrum-zcl
+.. image:: https://travis-ci.org/ZClassicCommunity/electrum-zcl.svg?branch=master
+    :target: https://travis-ci.org/ZClassicCommunity/electrum-zcl
     :alt: Build Status
 
 
@@ -53,7 +53,7 @@ Development version
 
 Check out the code from GitHub::
 
-    git clone git://github.com/skellers22/electrum-zclassic.git
+    git clone git://github.com/ZClassicCommunity/electrum-zclassic.git
     cd electrum-zclassic
 
 Run install (this should install dependencies)::
