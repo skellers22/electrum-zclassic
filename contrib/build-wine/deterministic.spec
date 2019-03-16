@@ -11,7 +11,7 @@ else:
     raise BaseException('no name')
 
 
-home = 'C:\\electrum\\'
+home = 'C:\\electrum-zclassic\\'
 
 # see https://github.com/pyinstaller/pyinstaller/issues/2005
 hiddenimports = []
@@ -27,13 +27,13 @@ binaries = [("c:/python3.5.4/libusb-1.0.dll", ".")]
 binaries += [b for b in collect_dynamic_libs('PyQt5') if 'qwindowsvista' in b[0]]
 
 datas = [
-    (home+'lib/currencies.json', 'electrum'),
-    (home+'lib/servers.json', 'electrum'),
-#    (home+'lib/checkpoints.json', 'electrum'),
-    (home+'lib/servers_testnet.json', 'electrum'),
-#    (home+'lib/checkpoints_testnet.json', 'electrum'),
-    (home+'lib/wordlist/english.txt', 'electrum/wordlist'),
-    (home+'lib/locale', 'electrum/locale'),
+#    (home+'lib/currencies.json', 'electrum-zclassic'),
+    (home+'lib/servers.json', 'electrum-zclassic'),
+#    (home+'lib/checkpoints.json', 'electrum-zclassic'),
+    (home+'lib/servers_testnet.json', 'electrum-zclassic'),
+#    (home+'lib/checkpoints_testnet.json', 'electrum-zclassic'),
+    (home+'lib/wordlist/english.txt', 'electrum-zclassic/wordlist'),
+    (home+'lib/locale', 'electrum-zclassic/locale'),
     (home+'plugins', 'electrum_plugins'),
     ('C:\\Program Files (x86)\\ZBar\\bin\\', '.')
 ]
@@ -86,12 +86,12 @@ exe_standalone = EXE(
     a.scripts,
     a.binaries,
     a.datas,
-    name=os.path.join('build\\pyi.win32\\electrum', cmdline_name + ".exe"),
+    name=os.path.join('build\\pyi.win32\\electrum-zclassic', cmdline_name + ".exe"),
     debug=False,
     strip=None,
     upx=False,
     icon=home+'icons/electrum-zclassic.ico',
-    console=False)
+    console=True)
     # console=True makes an annoying black box pop up, but it does make Electrum output command line commands, with this turned off no output will be given but commands can still be used
 
 exe_portable = EXE(
@@ -99,7 +99,7 @@ exe_portable = EXE(
     a.scripts,
     a.binaries,
     a.datas + [ ('is_portable', 'README.md', 'DATA' ) ],
-    name=os.path.join('build\\pyi.win32\\electrum', cmdline_name + "-portable.exe"),
+    name=os.path.join('build\\pyi.win32\\electrum-zclassic', cmdline_name + "-portable.exe"),
     debug=False,
     strip=None,
     upx=False,
@@ -113,7 +113,7 @@ exe_dependent = EXE(
     pyz,
     a.scripts,
     exclude_binaries=True,
-    name=os.path.join('build\\pyi.win32\\electrum', cmdline_name),
+    name=os.path.join('build\\pyi.win32\\electrum-zclassic', cmdline_name),
     debug=False,
     strip=None,
     upx=False,
@@ -130,4 +130,4 @@ coll = COLLECT(
     debug=False,
     icon=home+'icons/electrum-zclassic.ico',
     console=False,
-    name=os.path.join('dist', 'electrum'))
+    name=os.path.join('dist', 'electrum-zclassic'))
