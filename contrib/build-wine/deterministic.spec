@@ -27,7 +27,7 @@ binaries = [("c:/python3.5.4/libusb-1.0.dll", ".")]
 binaries += [b for b in collect_dynamic_libs('PyQt5') if 'qwindowsvista' in b[0]]
 
 datas = [
-#    (home+'lib/currencies.json', 'electrum-zclassic'),
+    (home+'lib/currencies.json', 'electrum-zclassic'),
     (home+'lib/servers.json', 'electrum-zclassic'),
 #    (home+'lib/checkpoints.json', 'electrum-zclassic'),
     (home+'lib/servers_testnet.json', 'electrum-zclassic'),
